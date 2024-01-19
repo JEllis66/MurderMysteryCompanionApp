@@ -1,0 +1,60 @@
+.notification-link {
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 0, 0, 0.1);
+  }
+  25% {
+    box-shadow: 0 0 13px rgba(255, 174, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 187, 0, 0.7);
+  }
+  75% {
+    box-shadow: 0 0 13px rgba(255, 115, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 0, 0, 0.1);
+  }
+}
+
+.notification-bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75vw;
+  height: 50px;
+  background-color: black;
+  border-radius: 30px;
+  padding: 0 10px;
+  position: fixed;
+  max-width: 250px;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: glow 1s linear infinite;
+  transform-origin: center center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.text {
+  flex: 4;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  padding-left: 10px;
+}

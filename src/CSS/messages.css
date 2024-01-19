@@ -1,0 +1,48 @@
+.message-box{
+  margin: 15px 2px;
+}
+
+.message{
+  padding: 6px 15px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.message-received{
+  background-color: var(--theme-nav-font-color);
+  color: var(--theme-nav-color);
+  border-radius: 0px 8px 8px 8px;
+}
+
+.message-sent{
+  background-color: var(--theme-nav-color);
+  color: var(--theme-nav-font-color);
+  border-radius: 8px 0px 8px 8px;
+}
+
+.message-content-received{
+  text-align: start;
+}
+
+.message-content-sent{
+  text-align: start;
+  color: white;
+}
+
+.message-details-received{
+  text-align: start;
+}
+
+.message-details-sent{
+  text-align: end;
+}
+
+#messaging-label{
+  z-index: 3 !important;
+  background-color: var(--app-background-color);
+  width: 135px;
+}
+
+#recipient{
+  z-index: 1 !important;
+  text-align: center;
+}

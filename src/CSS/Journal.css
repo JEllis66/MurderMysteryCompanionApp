@@ -1,0 +1,38 @@
+/* Journal.css */
+.paper {
+  position: relative;
+  border: 1px solid #e2f8ff;
+  border-radius: 3px;
+  background-color: white;
+  z-index: 1;
+}
+
+.ruled-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 14px, #eef8fc 14px, #ceeef8 16px);
+  z-index: 2;
+}
+
+#live {
+  border: none;
+  background: transparent !important;
+  resize: none !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  line-height: 32px !important; 
+  padding: 1px 12px !important;
+  width: 100%;
+  z-index: 3;
+  position: relative;
+  overflow: auto !important;
+  max-height: 60vh !important;
+}
+
+::placeholder{
+  font-style: italic;
+}

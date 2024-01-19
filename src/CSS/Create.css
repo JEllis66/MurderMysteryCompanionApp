@@ -1,0 +1,321 @@
+
+
+.create-character-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  }
+
+ .create-character-form::-webkit-scrollbar,.my-custom-scroll::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar track */
+.my-custom-scroll-skinny::-webkit-scrollbar{
+  width: 4px;
+}
+
+.my-custom-scroll-skinny::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.my-custom-scroll-skinny::-webkit-scrollbar-thumb{
+  background: #888; /* Color of the thumb */
+}
+
+.my-custom-scroll-skinny::-webkit-scrollbar-thumb:hover{
+  background: #555; /* Color of the thumb */
+}
+
+.create-character-form::-webkit-scrollbar-track,.my-custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+  border: 1px solid rgb(34, 34, 34);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.253);
+}
+
+/* Style the scrollbar thumb */
+.create-character-form::-webkit-scrollbar-thumb,.my-custom-scroll::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the thumb */
+  border: 1px solid rgb(34, 34, 34);
+  border-radius: 3px; /* Rounded corners of the thumb */
+}
+
+/* Style the scrollbar on hover */
+.create-character-form::-webkit-scrollbar-thumb:hover,.my-custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the thumb on hover */
+}
+
+  /* Hide the scrollbar for webkit-based browsers */
+.create-character-container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Optional: Add styles for the scrollbar thumb and track */
+.create-character-container::-webkit-scrollbar-thumb {
+  background: transparent;
+  width: 0;
+}
+
+.create-character-container::-webkit-scrollbar-track {
+  background: transparent;
+  width: 0;
+}
+
+.create-character-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  padding: 20px;
+  box-shadow: 5px 0px 6px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-height: 65vh;
+  overflow-y: auto;
+  margin-top: 20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%
+}
+
+
+.create-character-header {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--primary-button-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+form{
+  width: 100%;
+}
+
+#searchForm{
+  width: 400px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: var(--primary-button-color)
+}
+
+.form-input {
+  width: calc(100% - 38px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-input-password {
+  width: 100%;
+  margin-right: 0px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.create-character-button {
+  background-color: var(--primary-button-color); /* Button background color (red) */
+  color: #fff; /* Button text color (white) */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.create-character-button:hover {
+  background-color: var(--theme-nav-lighter); /* Button background color on hover */
+}
+
+.back-to-login-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.back-to-login-link a {
+  color: var(--primary-button-color); /* Link color (red) */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-to-login-link a:hover {
+  text-decoration: underline;
+}
+
+.refresh-button{
+  background-color: var(--primary-button-color);
+  width: 38px;
+  text-align: center;
+  border-radius: 0.3rem;
+  border-width: 0.px;
+  border-color: #ccc;
+  font-weight: bolder;
+  color: var(--button-font-color);
+}
+
+.refresh-button:hover{
+  opacity: 90%;
+}
+
+.form-textarea, .form-textarea-note, .form-textarea-questConcern{
+  border-radius: 0.3rem;
+  border-color: #ccc;
+  border: solid 1px #ccc;
+  padding: 10px;
+  overflow: auto;
+}
+
+.form-textarea {
+  width: calc(100% - 38px);
+}
+
+.form-textarea-note{
+  width: 100%;
+  height: 250px;
+}
+
+.form-textarea-questConcern{
+  width: 100%;
+  height: 150px;
+}
+
+/* Styles for when passwords match */
+.password-input {
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.password-input-error, .input-error {
+  background-color: rgb(253, 193, 193) !important;
+}
+
+.form-error-message{
+  width: 100%;
+  text-align: start;
+  color: #6d1919;
+  font-size: 10pt;
+  font-style:italic ;
+  background-color: rgb(253, 193, 193);
+  padding: 8px;
+  border: solid 1px rgb(95, 0, 0);
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.custInput{
+  border: 1px solid rgb(189, 189, 189) !important;
+}
+
+.custInput2{
+  border: 1px solid rgb(189, 189, 189) !important;
+  border-left: none !important;
+}
+
+.custom-upload-button {
+  background-color: #548ae0;
+  color: #fff;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#fileInput,#fileInput2,#fileInput3{
+  background-color: white;
+  padding: 5px 10px 5px 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(189, 189, 189);
+  overflow-x: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#fileInputPopulated,#fileInput2Populated,#fileInput3Populated{
+  background-color: white;
+  padding: 5px 10px 5px 5px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid rgb(189, 189, 189);
+  overflow-x: hidden;
+  white-space: nowrap;
+  width: 90%;
+  border-right: none;
+}
+
+.padd{
+  padding: 10vw !important;
+}
+
+tr.border-table td{
+  border-right: solid 1px #ddd;
+}
+
+tr.border-table th{
+  border-right: solid 1px var(--theme-nav-lighter);
+}
+
+tr.border-table td:last-child{
+  border-right: none;
+}
+
+tr.border-table th:last-child{
+  border-right: none;
+}
+
+#selectedMethod{
+  border-radius: 5px 0 0 5px;
+}
+
+.delete-image-attachment{
+  cursor: pointer;
+  color: white;
+  background-color: #dc3545;
+  border-radius: 50%;
+  padding: 3px;
+  font-weight: bolder;
+}
+
+.delete-img-div{
+  background: white;
+  padding: 3px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid rgb(189, 189, 189);
+  border-left: none;
+}
+
+#paperDate{
+  background-color: white;
+}
+
+.undo-button{
+  border-radius: 0px 5px 5px 0px;
+  border-left: none;
+  padding: 10px;
+  height: 48px;
+  width: 36px;
+  cursor: pointer;
+}
+
+.undo-button:hover{
+  opacity: 70%;
+}
+
+.color-input:focus{
+  border: none !important;
+}

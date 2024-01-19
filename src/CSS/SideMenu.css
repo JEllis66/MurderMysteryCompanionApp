@@ -1,0 +1,147 @@
+/* SideMenu.css */
+.side-menu {
+  left: -60%; 
+  width: 60%;
+  position: fixed;
+  top: 0;
+  height: 100vh; 
+  background-image: linear-gradient(to bottom left, #ffffff, #8b8b8b); /* Background color */
+  z-index: 9999; /* Higher z-index to keep it above everything else */
+  transition: left 0.66s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  border-right: 0.1px solid var(--theme-nav-color);
+}
+.side-menu.open {
+  left: 0;
+}
+
+.menu-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  z-index: -1; 
+}
+
+.menu-top {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 8px 15px 0px;
+  background-color: var(--theme-nav-color);
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.menu-icon:first-child:hover {
+  margin: -5px 0px -5px -5px
+}
+
+#hamburger:hover{
+  margin-top: -5px;
+}
+
+.menu-content {
+  flex-grow: 1; /* Allow menu-content to grow and take up available space */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.dashboardLink {
+  background-color: white;
+  color: var(--theme-nav-color);
+  text-decoration: none;
+  font-size: 2vh;
+  height: 6vh;
+  cursor: pointer;
+  border-bottom: 2px solid black;
+  display: flex; /* Add display flex */
+  align-items: center; /* Align text vertically center */
+  padding-left: 0px; /* Add left padding to create spacing */
+  justify-content: center; /* Stretch menu items to full width */
+}
+
+.menu-item {
+  background-color: var(--theme-nav-color);
+  color: var(--theme-nav-font-color);
+  text-decoration: none;
+  font-size: 2vh;
+  height: 6vh;
+  cursor: pointer;
+  border-bottom: 2px solid black;
+  display: flex; /* Add display flex */
+  align-items: center; /* Align text vertically center */
+  padding-left: 10px; /* Add left padding to create spacing */
+  justify-content: start; /* Stretch menu items to full width */
+}
+
+.menu-item-sub {
+  color: var(--theme-nav-color);
+  text-decoration: none;
+  font-size: 1.7vh;
+  height: 6vh;
+  cursor: pointer;
+  border-bottom: 2px solid black;
+  display: flex; /* Add display flex */
+  align-items: center; /* Align text vertically center */
+  padding-right: 10px; /* Add left padding to create spacing */
+  justify-content: end; /* Stretch menu items to full width */
+}
+
+.menu-sub-link:hover{
+  color: var(--theme-nav-font-color);
+}
+
+
+.menu-item:hover, .menu-item-sub:hover, .dashboardLink:hover {
+  color: var(--theme-nav-font-color);
+  background-image: linear-gradient(to right, var(--theme-nav-color), var(--theme-nav-lighter));
+}
+
+.menu-icon:hover {
+  background-color: rgba(0,0,0, 0.2);
+  padding: 5px;
+  margin: 5px -5px -5px 0px;
+  border-radius: 3px;
+}
+
+.menu-main{
+  text-transform: uppercase;
+  margin: 5px 5px 0px;
+  align-items: center;
+}
+
+.icon-title{
+  padding-top: 2px;
+}
+
+.drop-down{
+  width: 25%;
+}
+
+#vote-button:hover{
+  color: white;
+}
+
+#vote-button{
+  border: 1px solid var(--theme-nav-color);
+  color: var(--theme-nav-color);
+  background-color: rgba(255,255,255, 0.4);
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+#vote-button:hover{
+  background-color: #198754;
+  border: 1px solid #198754 !important;
+  border-radius: 6px;
+}
+
+#final-sub-menu{
+  border-bottom: 3px solid var(--theme-nav-color);
+}

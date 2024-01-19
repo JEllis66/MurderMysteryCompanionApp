@@ -1,0 +1,135 @@
+/* Navbar.css */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: var(--theme-nav-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--theme-nav-font-color);
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--theme-nav-font-color);
+  text-decoration: none;
+  padding: 6px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  color: var(--theme-nav-font-color);;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+}
+
+.navbar-toggler {
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-toggler {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.custom-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.neumorphic-navbar-tab:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 4px;
+  border-radius: 5px; 
+  max-height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neumorphic-navbar-tabs {
+  /* Add other styles as needed */
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 5px;
+  /* Add gradient for neumorphic illusion */
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(0, 0, 0, 0.05)
+  );
+  /* Add box shadows for neumorphic effect */
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.active-tab, .active-icon {
+  box-shadow: 0 0 5px rgb(231, 229, 230);
+  }
+
+.header-text {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--primary-button-color);
+}
+
+.big-header-text {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--primary-button-color);
+}
+
+#HomeLink:hover{
+  background-color: var(--theme-nav-color);
+  cursor: text;
+}
+
+.dull-tab {
+  opacity: 0.4; /* Adjust the opacity value to make the tabs appear duller */
+}
+
+.default-tab {
+  opacity: 1.0;
+}
+
+.header-item{
+  font-weight: bold;
+}
+
+.header-item:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 5px;
+  margin: -5px;
+  cursor: pointer;
+}
+

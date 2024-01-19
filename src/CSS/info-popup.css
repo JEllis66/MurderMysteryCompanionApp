@@ -1,0 +1,93 @@
+/* Style for the info-popup container */
+.info-popup {
+  position: relative;
+  max-width: 95vw;
+  background-color: #e6f7ff; /* Mild light blue background color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+}
+
+.info-popup-mini {
+  position: relative;
+  max-width: 95vw;
+  background-color: #ddddff; /* Mild light blue background color */
+  padding: 0px 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the info header containing info icon and close icon */
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Style for the info icon */
+.info-icon {
+  font-size: 20px;
+  color: #007bff; 
+  background-color: #aed5ff;
+  margin-top: 5px;
+  margin-left: -10px;
+  padding: 0px 13px;
+  border-radius: 3em;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.info-icon:hover {
+  color: #ffffff; 
+  background-color: #3d70a7;
+  border: 1px solid #0b2b4d;
+}
+
+/* Style for the close icon */
+.close-icon {
+  font-size: 20px;
+  color: rgb(0, 110, 255);
+  padding: 0px 8px;
+  cursor: pointer;
+  margin-right: -13px;
+}
+
+/* Style for the description text */
+.info-description {
+  padding: 5px 0;
+  color: #333; /* Dark text color */
+  text-align: start;
+  font-size: 12pt;
+}
+
+.text-primary{
+  font-style: italic;
+}
+
+
+.info-container::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar track */
+.info-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+  border-radius: 3em;
+}
+
+/* Style the scrollbar thumb */
+.info-container::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
+
+/* Style the scrollbar on hover */
+.info-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the thumb on hover */
+}

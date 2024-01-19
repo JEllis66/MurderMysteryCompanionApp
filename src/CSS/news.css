@@ -1,0 +1,14 @@
+body{
+  font-family: 'Cantebury', sans-serif !important;
+}
+
+.card-body{
+  background-color: #ffffff;
+}
+
+.card-text{
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  border-radius: 3px;
+  background-color: #eee;
+}

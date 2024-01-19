@@ -1,0 +1,191 @@
+
+.dashboard-container {
+  align-items: center;
+}
+
+.tile-text {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+
+.icon {
+  margin-top: 3px;
+  margin-bottom: 2px;
+  padding: 5px; 
+}
+
+.tile-text,
+.dashboard-header {
+  font-family: 'Roboto', sans-serif; 
+}
+
+
+.tile-container-portrait {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  justify-items: space-between;
+  column-gap: 7px;
+  row-gap: 10px;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.tile-container-landscape {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: space-between;
+  column-gap: 7px;
+  row-gap: 10px;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 6vh;
+  padding-top: 10px;
+  /* color: #fff; .....................................*/
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.tile-portrait {
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  /* border: solid 1px #fff; */
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  color: #fff;
+  height: 15vh;
+}
+
+.tile-landscape {
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  /* border: solid 1px #fff; */
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  color: #fff;
+  height: 30vh;
+}
+
+/* Center icon within tile */
+.tile i {
+  margin-bottom: 5px;
+}
+
+/* Center text within tile */
+.tile p {
+  margin: 0 auto;
+}
+
+/* Top left tile - leather brown gradient */
+.journal {
+  background-image: linear-gradient(to bottom right, #095716, #1edd28);
+}
+
+/* Top right tile - light blue gradient */
+.database {
+  background-image: linear-gradient(to bottom right, #00BFFF, #093e72);
+}
+
+/* Bottom left tile - dark steel gradient */
+.classified {
+  background-image: linear-gradient(to bottom right, rgb(179, 152, 0), #e79451);
+}
+
+/* Bottom right tile - blood orange gradient */
+.help {
+  background-image: linear-gradient(to bottom right, #751111, #ff1414);
+
+}
+
+/* Hover effect for tiles */
+.tile-landscape:hover, .tile-portrait:hover {
+  filter: brightness(140%); /* Apply 30% darkness to tiles on hover */
+  cursor: pointer; /* Set pointer cursor on hover */
+}
+
+.terminal-window {
+  background-color: #000;
+  padding: 10px;
+  height: 70%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px #fff;
+}
+
+.terminal-input {
+  color: #00ff00;
+  font-size: 3vh;
+  
+}
+
+.terminal-cursor {
+  animation: cursor-animation 1s infinite;
+  display: inline-block;
+  transform: translate(1px,-2px);
+}
+
+@keyframes cursor-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media query for screens smaller than 450px */
+@media (max-width: 500px) {
+  .dashboard-container {
+    width: 100vw; /* Update width to 100vw for full width on smaller screens */
+    min-width: initial; /* Remove min-width for smaller screens */
+  }
+
+  .tile-container {
+    grid-template-columns: 1fr; /* Update to 1 column for screens smaller than 450px */
+    grid-template-rows: repeat(4, 1fr); /* Update to 4 rows for screens smaller than 450px */
+    width: 90vw; /* Update width to 90vw for screens smaller than 450px */
+    margin: auto;
+    margin-top: 8vh; /* Update margin-top for screens smaller than 450px */
+    gap: 15px; /* Update gap between tiles for screens smaller than 450px */
+  }
+
+  .tile-portrait, .tile-landscape {
+    width: 90%; /* Update tile width to 90% for screens smaller than 450px */
+    margin: auto; /* Update margin for screens smaller than 450px */
+  }
+}
+
+#homeNav {
+ text-decoration: none !important; 
+ color: var(--theme-nav-font-color);
+}
+
+#invis{
+  text-decoration: none !important;
+  color: black !important;
+  font-size: 8px;
+}
