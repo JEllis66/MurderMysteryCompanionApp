@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Story/Item Creation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style/style.css">
+</head>
+<body class="dark-mode">
+
+    <div class="container-fluid h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-md-6">
+                
+                <div class="text-center">
+                    <h1 class="text-danger my-4">Story/Item Creation:</h1>
+                </div>
+
+                <form id="storyForm" action="/register_story_item" method="post">
+
+                    {% with messages = get_flashed_messages(category_filter=['storyitem']) %}
+                        {% if messages %}
+                            <div class="alert alert-danger" role="alert">
+                                <strong><u>Entry Error:</u></strong>
+                                {% for message in messages %}
+                                    <p class="mt-2"> - {{message}}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+
+                    <a href="/admin_storyitem_alt" class="d-flex justify-content-center btn btn-link text-center text-primary] small"> - Clear Form - </a>
+
+                    <div class="form-group">
+                        <label for="story_title" class="text-danger">Title</label>
+                        {% if session['story_title'] %}
+                            <input value="{{session['story_title']}}" type="text" class="form-control" name="story_title" id="story_title" placeholder="Enter title...">
+                        {% else %}
+                            <input type="text" class="form-control" name="story_title" id="story_title" placeholder="Enter title...">
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="text-danger">Description</label>
+                        {% if session['description'] %}
+                            <textarea value="{{session['description']}}" rows="3" class="form-control" name="description" id="description" placeholder="Enter description..."></textarea>
+                        {% else %}
+                            <textarea rows="3" class="form-control" name="description" id="description" placeholder="Enter description..."></textarea>
+                        {% endif %}
+                    </div>
+                    <div class="form-group mb-0">
+                        <label for="lookup_key" class="text-danger d-flex-inline justify-content-between">Lookup-Key</label>
+                        <div class="ml-1 row justify-content-start">
+                            {% if session['lookup_key'] %}
+                                <input value="{{session['lookup_key']}}" type="text" class="form-control col-10" name="lookup_key" id="lookup_key" placeholder="Create or generate lookup-key...">
+                                <p class="col-2" id="refresh-text" style="line-height: 2.3em;">🔄</p>
+                            {% else %}
+                                <input type="text" class="form-control col-10" name="lookup_key" id="lookup_key" placeholder="Create or generate lookup-key...">
+                                <p class="col-2" id="refresh-text" style="line-height: 2.3em;">🔄</p>
+                            {% endif %}
+                        </div>    
+                    </div>
+                    <div class="form-group">
+                        <label for="item_content" class="text-danger">Item Content</label>
+                        <input type="text" class="form-control" name="item_content" id="item_content" placeholder="Enter item content...">
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a href="/admin_dashboard" class="btn btn-link text-center text-danger text-decoration-none col-2 mr-3 border-danger">Cancel</a>
+                        <button type="submit" value="Enter" class="my-4 btn btn-danger btn-block col-9">Submit Story/Item</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function clearForm(){
+            document.getElementById("storyForm").reset();
+        }
+
+        const apiKey = `{{ apiKey }}`
+        
+        window.onload = function() {
+            document.getElementById("refresh-text").addEventListener("click", function(){
+                    fetch("https://api.random.org/json-rpc/1/invoke", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            jsonrpc: "2.0",
+                            method: "generateStrings",
+                            params: {
+                                apiKey: apiKey,
+                                n: 1,
+                                length: 8,
+                                characters: "abcdefghjklmnprtuvwyABCDEFGHJKLMNPRTUVWY123456789",
+                                replacement: true
+                            },
+                            id: 42                  
+                        })
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data.result.random.data[0]);
+                            document.getElementById('lookup_key').value = data.result.random.data[0].toUpperCase()
+                    });
+            });
+        }
+    </script>
+
+</body>
+</html>

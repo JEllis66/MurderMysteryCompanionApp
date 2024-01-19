@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style/style.css">
+</head>
+<body class="dark-mode">
+
+    <div class="container-fluid h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-md-6">
+                
+                <div class="text-center">
+                    <h1 class="text-danger my-4">Admin Dashboard:</h1>
+                </div>
+
+                <div class="d-flex justify-content-center my-2">
+                    <button class="col-5 btn btn-success my-2 mx-2"><a class="text-decoration-none text-white" href="/admin_character">Character Creation</a></button>
+                    <button class="col-5 btn btn-primary my-2 mx-2"><a class="text-decoration-none text-white" href="/admin_character_view">View Characters</a></button>
+                </div>
+                <div class="d-flex justify-content-center my-2">
+                    <button class="col-5 btn btn-success my-2 mx-2"><a class="text-decoration-none text-white" href="/admin_storyitem">Story Item Creation</a></button>
+                    <button class="col-5 btn btn-primary my-2 mx-2"><a class="text-decoration-none text-white" href="/admin_storyitem_view">View Story Items</a></button>
+                </div>
+                <div class="d-flex justify-content-center my-2">
+                    <div class="text-center my-2 col-12">
+                        <button class="btn btn-secondary"><a class="text-decoration-none text-white" href="/">Back to User Login</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function clearForm(){
+            document.getElementById("regForm").reset();
+        }
+
+    </script>
+
+</body>
+</html>
